@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Ask a Question";
+}
+
+<div class="content">
+    <h1>Ask me anything</h1>
+    <form method="post" action="ProcessRequest">
+        <label for="name">Your name: <input type="text" name="name" id="inputName" /></label><br />
+        <label for="subject">Subject: <select name="subject" id="inputSubject">
+           <option value="Random question">Random Question</option>
+            <option value="Compliment">A compliment</option>
+         <option value="Spam">SPAM</option>
+
+                                      </select></label><br />
+        <label for="message">Your Message: <textarea id="inputMessage" name="message"></textarea></label><br />
+        <input type="submit" />
+    </form>
+</div>

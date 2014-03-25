@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Email Sent";
+}
+<div class="content">
+  <p>Your message has been sent, <b>@ViewBag.emailName</b>. We will respond within 24 hours.</p>
+    @if(ViewBag.errorMessage == ""){
+      <p> Brent has received your message with the following subject:</p>
+      <p><b>@ViewBag.emailSubject</b></p>
+    }
+    else{
+        <p><b>The email was <em>not</em> sent.</b></p>
+        <p>Please check that the code in the ProcessRequest page has 
+           correct settings for the SMTP server name, a user name, 
+           a password, and a "from" address.
+        </p>
+        if(ViewBag.debuggingFlag){
+            <p>The following error was reported:</p>
+            <p><em>@ViewBag.errorMessage</em></p>
+        }
+    }
+</div>
